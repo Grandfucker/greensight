@@ -236,6 +236,17 @@ h1 {
   justify-content: center;
 }
 
+.form__button:visited {
+  background: #EDEEEF;
+  border-radius: 80px;
+  color: #999999;
+}
+
+.form__button:hover {
+  background: #0F41C4;
+  border-radius: 80px;
+}
+
 .map {
   display: none;
   position: relative;
@@ -257,11 +268,19 @@ h1 {
   right: 40px;
 }
 
-.map__google {
+.map #map {
   position: absolute;
   top: 96px;
   left: 40px;
   width: 952px;
   height: 560px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

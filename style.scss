@@ -60,6 +60,8 @@ h1 {
         }
     }
 
+
+
     &__pickup__tab {
         display: flex;
         justify-content: center;
@@ -235,6 +237,19 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:visited {
+            background: #EDEEEF;
+            border-radius: 80px;
+            color: #999999;
+        }
+
+        &:hover {
+            background: #0F41C4;
+            border-radius: 80px;
+        }
+
+        
     }
 
 }
@@ -259,13 +274,23 @@ h1 {
         right: 40px;
     }
 
-    &__google {
+    & #map {
         position: absolute;
         top: 96px;
         left: 40px;
         width: 952px;
-        height: 560px ;
+        height: 560px;
     }
 
 
+}
+
+.hide {
+    display: none;
+}
+
+;
+
+.show {
+    display: block;
 }

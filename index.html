@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZAMgy_91mcrmPUevpxIgbAcff9o2sVyE&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
     <title>Доставка</title>
 </head>
 
@@ -13,8 +17,9 @@
     <div class="container">
     <h1>Выберите способ доставки</h1>
     <div class="delivery">
-        <div class="delivery__tab active"><a href=""> Доставка</a></div>
-        <div class="delivery__pickup__tab"><a href="">Самовывоз</a></div>
+        <div id="auto" class="delivery__tab active"><a href="#"> Доставка</a></div>
+        <div id="self" class="delivery__pickup__tab "><a href="#"> Самовывоз</a></div> 
+       
     </div>
     <div class="form">
         <p class="form__name">ФИО</p>
@@ -25,16 +30,17 @@
         <label class="useraddress" for="useraddress"><input id="useraddress" type="text" placeholder="Город, улица, дом"></label>
         <p class="form__comments">Комментарий</p>
         <label class="comments" for="comments"><input id="comments" type="text"></label>
-        <button class="form__button">Оформить заказ</button>
+        <a class="form__button" href="#">Оформить заказ</a>
     </div>
     <div class="map">
-        <p class="map__first__address"><input type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
-        <p class="map__second__address"><input type="radio" name ="address"> Пункт выдачи заказов Подсосенский пер., д. 11 </p>
-        <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d35717.8039618657!2d37.1321196!3d55.9777444!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1598120986474!5m2!1sru!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <button class="form__button">Оформить заказ</button>
+        <p class="map__first__address"><input class="first__address" type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
+        <p class="map__second__address"><input class="second__address" type="radio" name ="address"> Пункт выдачи заказов Подсосенский пер., д. 11 </p>
+        <div id="map"></div>
+        <a class="form__button" href="">Оформить заказ</a>
     </div>
     </div>
     <script src="script.js"></script>
+    
 </body>
 
 </html>
