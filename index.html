@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Доставка</title>
 </head>
+
 <body>
-    
+    <div class="container">
+    <h1>Выберите способ доставки</h1>
+    <div class="delivery">
+        <div class="delivery__tab active"><a href=""> Доставка</a></div>
+        <div class="delivery__pickup__tab"><a href="">Самовывоз</a></div>
+    </div>
+    <div class="form">
+        <p class="form__name">ФИО</p>
+        <label class="username" for="username"><input id="username" type="text" placeholder="Только кириллица" ></label>
+        <p class="form__phone">Телефон</p>
+        <label class="userphone" for="userphone"><input id="userphone" type="text" placeholder="+7 (___) ___-__-__" ></label>
+        <p class="form__address">Адрес доставки</p>
+        <label class="useraddress" for="useraddress"><input id="useraddress" type="text" placeholder="Город, улица, дом"></label>
+        <p class="form__comments">Комментарий</p>
+        <label class="comments" for="comments"><input id="comments" type="text"></label>
+        <button class="form__button">Оформить заказ</button>
+    </div>
+    <div class="map">
+        <p class="map__first__address"><input type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
+        <p class="map__second__address"><input type="radio" name ="address"> Пункт выдачи заказов Подсосенский пер., д. 11 </p>
+        <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d35717.8039618657!2d37.1321196!3d55.9777444!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sde!4v1598120986474!5m2!1sru!2sde" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <button class="form__button">Оформить заказ</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
