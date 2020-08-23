@@ -7,40 +7,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZAMgy_91mcrmPUevpxIgbAcff9o2sVyE&callback=initMap&libraries=&v=weekly"
-    defer
-  ></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZAMgy_91mcrmPUevpxIgbAcff9o2sVyE&callback=initMap&libraries=&v=weekly"
+        defer></script>
     <title>Доставка</title>
 </head>
 
 <body>
     <div class="container">
-    <h1>Выберите способ доставки</h1>
-    <div class="delivery">
-        <div id="auto" class="delivery__tab active"><a href="#"> Доставка</a></div>
-        <div id="self" class="delivery__pickup__tab "><a href="#"> Самовывоз</a></div> 
-       
-    </div>
-    <div class="form">
-        <p class="form__name">ФИО</p>
-        <label class="username" for="username"><input id="username" type="text" placeholder="Только кириллица" ></label>
-        <p class="form__phone">Телефон</p>
-        <label class="userphone" for="userphone"><input id="userphone" type="text" placeholder="+7 (___) ___-__-__" ></label>
-        <p class="form__address">Адрес доставки</p>
-        <label class="useraddress" for="useraddress"><input id="useraddress" type="text" placeholder="Город, улица, дом"></label>
-        <p class="form__comments">Комментарий</p>
-        <label class="comments" for="comments"><input id="comments" type="text"></label>
-        <a class="form__button" href="#">Оформить заказ</a>
-    </div>
-    <div class="map">
-        <p class="map__first__address"><input class="first__address" type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
-        <p class="map__second__address"><input class="second__address" type="radio" name ="address"> Пункт выдачи заказов Подсосенский пер., д. 11 </p>
-        <div id="map"></div>
-        <a class="form__button" href="">Оформить заказ</a>
-    </div>
+        <h1>Выберите способ доставки</h1>
+        <div class="delivery">
+            <div id="auto" class="delivery__tab active"><a href="#"> Доставка</a></div>
+            <div id="self" class="delivery__pickup__tab "><a href="#"> Самовывоз</a></div>
+
+        </div>
+        <div class="form">
+            <div class="form__info">
+                <div class="form__name">
+                    <p class="form__name-p">ФИО</p>
+                    <label class="username" for="username"><input id="username" type="text"
+                            placeholder="Только кириллица"></label>
+                </div>
+                <div class="form__phone">
+                    <p class="form__phone-p">Телефон</p>
+                    <label class="userphone" for="userphone"><input id="userphone" type="text"
+                            placeholder="+7 (___) ___-__-__"></label>
+                </div>
+            </div>
+
+            <div class="form__address">
+                <p class="form__address-p">Адрес доставки</p>
+                <label class="useraddress" for="useraddress"><input id="useraddress" type="text"
+                        placeholder="Город, улица, дом"></label>
+            </div>
+
+            <div class="form__comments">
+                <p class="form__comments-p">Комментарий</p>
+                <label class="usercomments" for="usercomments"><input id="usercomments" type="text"></label>
+            </div>
+            <a class="form__button" href="#">Оформить заказ</a>
+        </div>
+        <div class="map">
+            <div class="map__addresses">
+                <p class="map__first__address"><input class="first__address" type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
+        <p class=" map__second__address"><input class="second__address" type="radio" name="address"> Пункт выдачи
+                    заказов Подсосенский пер., д. 11 </p>
+            </div>
+            <div id="map"></div>
+            <a class="form__button" href="">Оформить заказ</a>
+        </div>
     </div>
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
