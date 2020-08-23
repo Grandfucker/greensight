@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
+        map = new google.maps.Map(document.querySelector(".map__google"), {
             center: {
                 lat: 55.977445,
                 lng: 37.149040
@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
     firstAddress.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('first__address')) {
             marker2.setAnimation(BOUNCE);
-            marker1.setAnimation(null)
+            marker1.setAnimation(null);
         }
     });
 
