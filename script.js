@@ -83,7 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 alert = document.querySelectorAll('.alert'),
                 alertText = document.querySelectorAll('.alert__text');
 
-
             for (let i = 0; i < alert.length; i++) {
                 switch (rule) {
                     case 'name':
@@ -97,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         }
                         break;
                     case 'number':
-                        check = /^\d+$/.test(value);
+                        check = /^\d+$[+-()]/.test(value);
                         if (check) {
                             alert[1].style.display = 'none';
                             alertText[1].style.display = 'none';
@@ -137,7 +136,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const maskOptions = {
 
-        mask: '+{7}(000)000-00-00',
+        mask: '{+7}(000) 000-00-00',
     };
     const mask = new IMask(element, maskOptions);
 

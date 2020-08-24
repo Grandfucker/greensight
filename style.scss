@@ -347,8 +347,11 @@ h1 {
         flex-direction: column;
         height: 70px;
     }
+    
+    .map__second__address {
+        width: auto;
+    }
 }
-
 
 @media (max-width: 1199.98px) {
     .form__info {
