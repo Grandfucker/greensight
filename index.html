@@ -9,6 +9,7 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZAMgy_91mcrmPUevpxIgbAcff9o2sVyE&callback=initMap&libraries=&v=weekly"
         defer></script>
+
     <title>Доставка</title>
 </head>
 
@@ -24,33 +25,43 @@
             <div class="form__info">
                 <div class="form__name">
                     <p class="form__name-p">ФИО</p>
-                    <label class="username" for="username"><input id="username" type="text"
-                            placeholder="Только кириллица"></label>
+                    <label  for="username"> </label> <input required class="username" id="username" type="text" data-rule="name"
+                            placeholder="Только кириллица"> 
+                            <div class="name__alert"><img class="alert" src="img/alert.svg" alt=""></div>
+                            <div class="alert__text">Текст аллерта, предупреждающий о неправильном заполнении</div>
                 </div>
+                
                 <div class="form__phone">
                     <p class="form__phone-p">Телефон</p>
-                    <label class="userphone" for="userphone"><input id="userphone" type="text"
-                            placeholder="+7 (___) ___-__-__"></label>
+                    <label for="userphone"> </label> 
+                    <input required class="userphone" id="userphone" type="tel" data-rule="number" placeholder="+7 (___) ___-__-__">
+                    <div class="number__alert"><img class="alert" src="img/alert.svg" alt=""></div>
+                    <div class="alert__text">Текст аллерта, предупреждающий о неправильном заполнении</div>
                 </div>
             </div>
 
             <div class="form__address">
                 <p class="form__address-p">Адрес доставки</p>
-                <label class="useraddress" for="useraddress"><input id="useraddress" type="text"
-                        placeholder="Город, улица, дом"></label>
+                <label for="useraddress"></label><input required class="useraddress" id="useraddress" type="text" data-rule="address" 
+                        placeholder="Город, улица, дом"> 
+                        <div class="address__alert"><img class="alert" src="img/alert.svg" alt=""></div>
+                        <div class="alert__text">Текст аллерта, предупреждающий о неправильном заполнении</div>
             </div>
 
             <div class="form__comments">
                 <p class="form__comments-p">Комментарий</p>
-                <label class="usercomments" for="usercomments"><input id="usercomments" type="text"></label>
+                <label for="usercomments"></label><input required class="usercomments"  id="usercomments" type="text" data-rule="comments" > 
+                <div class="comment__alert"><img class="alert" src="img/alert.svg" alt=""></div>
+                <div class="alert__text comment__text">Текст аллерта, предупреждающий о неправильном заполнении</div>
             </div>
-            <a class="form__button" href="#">Оформить заказ</a>
+           
+            <input class="form__button" type="submit" value="Оформить заказ">
         </div>
         <div class="map">
             <div class="map__addresses">
-                <p class="map__first__address"><input class="first__address" type="radio" name="address" "> Пункт выдачи заказов Песчаная ул., д. 13</p>
-        <p class=" map__second__address"><input class="second__address" type="radio" name="address"> Пункт выдачи
-                    заказов Подсосенский пер., д. 11 </p>
+               <div class="map__first__address"><input id="first__address" type="radio" name="address"><label for="first__address">Пункт выдачи заказов Песчаная ул., д. 13 </label> </div> 
+        <div  class=" map__second__address"><input id="second__address" type="radio" name="address"> <label for="second__address"> Пункт выдачи
+            заказов Подсосенский пер., д. 11</label> </div> 
             </div>
             <div class="map__google" ></div>
             <a class="form__button" href="">Оформить заказ</a>
@@ -58,6 +69,7 @@
     </div>
     <script src="script.js"></script>
 
+    <script src="https://unpkg.com/imask"></script>
 </body>
 
 </html>
