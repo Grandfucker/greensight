@@ -15,14 +15,13 @@ input {
     border: none
 }
 
-input::-webkit-input-placeholder {
+textarea::-webkit-input-placeholder {
     color: $grey;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-
 }
 
 a {
@@ -125,6 +124,7 @@ h1 {
     }
 
     & .username {
+        resize: none;
         margin-top: 12px;
         width: 100%;
         height: 48px;
@@ -132,13 +132,13 @@ h1 {
         box-sizing: border-box;
         border-radius: 4px;
         display: flex;
-        align-items: center;
         padding-left: 17px;
+        padding-top: 12px;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
-        line-height: 24px;
+
 
         &:focus {
             border: 1px solid $black;
@@ -160,6 +160,7 @@ h1 {
     }
 
     & .userphone {
+        resize: none;
         margin-top: 12px;
         width: 100%;
         height: 48px;
@@ -169,6 +170,12 @@ h1 {
         display: flex;
         align-items: center;
         padding-left: 17px;
+        padding-top: 12px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
 
         &:focus {
             border: 1px solid $black;
@@ -187,10 +194,12 @@ h1 {
     }
 
     & .useraddress {
+        resize: none;
         position: relative;
         margin-top: 12px;
         display: flex;
         padding-left: 17px;
+        padding-top: 12px;
         align-items: center;
         width: 100%;
         height: 48px;
@@ -222,6 +231,7 @@ h1 {
     }
 
     & .usercomments {
+        resize: none;
         margin-top: 12px;
         width: 100%;
         height: 112px;
@@ -337,6 +347,37 @@ h1 {
     }
 }
 
+.custom-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-input+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-input+label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #222222;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 6px 6px;
+    margin-right: 8px;
+}
+
+.custom-input:checked+label::before {
+    background-image: url(/img/Ellipse.svg);
+}
+
+
 @media (max-width: 1050px) {
     .container {
         padding: 0;
@@ -347,7 +388,7 @@ h1 {
         flex-direction: column;
         height: 70px;
     }
-    
+
     .map__second__address {
         width: auto;
     }

@@ -19,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
         auto.classList.add('active');
         pickUp.classList.remove('active');
         tabWithForm.classList.add('show');
+        tabWithForm.classList.remove('hide');
+
+        
     });
 
     let map;
@@ -73,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
         marker2.setAnimation(null);
     });
 
-    let inputs = document.querySelectorAll('input[data-rule');
+    let inputs = document.querySelectorAll('textarea');
 
     for (let input of inputs) {
         input.addEventListener('blur', function (e) {
@@ -96,7 +99,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         }
                         break;
                     case 'number':
-                        check = /^\d+$[+-()]/.test(value);
+                        check = /\d[+-()]/.test(value);
                         if (check) {
                             alert[1].style.display = 'none';
                             alertText[1].style.display = 'none';
